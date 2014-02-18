@@ -1,0 +1,32 @@
+{
+  "name":"webforge\/serializer",
+  "description":"Configuration for the JMS Serializer",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Philipp Scheit",
+      "email":"p.scheit@ps-webforge.com"
+    }
+  ],
+  "minimum-stability":"dev",
+  "autoload":{
+    "psr-0":{
+      "Webforge\\Serializer":["src/php/", "tests/php/"]
+    }
+  },
+  "require":{
+    "jms/serializer":"0.15.*@dev"
+  },
+  "extra":{
+    "branch-alias":{
+      "dev-master":"1.0.x-dev"
+    },
+
+    "directory-locations": {
+      "lib": "src/php/"
+    }
+  },
+  "require-dev": {
+    "webforge/testplate": "1.*"
+  }
+}
