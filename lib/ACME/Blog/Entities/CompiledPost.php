@@ -11,7 +11,7 @@ use Webforge\Common\DateTime\DateTime;
  * Compiled Entity for ACME\Blog\Entities\Post
  * 
  * To change table name or entity repository edit the ACME\Blog\Entities\Post class.
- * @ORM\MappedSuperClass
+ * @ORM\MappedSuperclass
  */
 abstract class CompiledPost {
   

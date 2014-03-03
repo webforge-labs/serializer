@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation AS Serializer;
  * Compiled Entity for ACME\Blog\Entities\Author
  * 
  * To change table name or entity repository edit the ACME\Blog\Entities\Author class.
- * @ORM\MappedSuperClass
+ * @ORM\MappedSuperclass
  */
 abstract class CompiledAuthor extends User {
   

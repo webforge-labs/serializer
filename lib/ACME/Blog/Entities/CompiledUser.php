@@ -9,9 +9,9 @@ use JMS\Serializer\Annotation AS Serializer;
  * Compiled Entity for ACME\Blog\Entities\User
  * 
  * To change table name or entity repository edit the ACME\Blog\Entities\User class.
- * @ORM\MappedSuperClass
+ * @ORM\MappedSuperclass
  */
-abstract class CompiledUser {
+abstract class CompiledUser extends \Webforge\Doctrine\Compiler\Test\BaseUserEntity {
   
   /**
    * id
