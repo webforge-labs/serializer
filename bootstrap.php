@@ -1,6 +1,7 @@
 <?php
 
 use Psc\Boot\BootLoader;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
 /**
  * Bootstrap and Autoload whole application
@@ -14,3 +15,7 @@ $bootLoader = new BootLoader(__DIR__);
 $bootLoader->loadComposer();
 //$bootLoader->registerContainer();
 $bootLoader->registerPackageRoot();
+
+// we don't want to have this in the autoloading section of the composer.json because we only use this in tests
+$bootLoader->getAutoLoader()->add('ACME', 'lib', $prepend = TRUE);
+AnnotationRegistry::registerLoader(array($bootLoader->getAutoLoader(), 'loadClass'));
