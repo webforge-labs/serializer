@@ -11,7 +11,7 @@ class ObjectSerializationVisitor extends JsonSerializationVisitor {
 
   // Does not json encode by default
   public function getResult() {
-    return (object) $this->getRoot();
+    return $this->getRoot();
   }
 
   /*
