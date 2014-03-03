@@ -11,10 +11,15 @@ class ObjectSerializationVisitor extends JsonSerializationVisitor {
 
   // Does not json encode by default
   public function getResult() {
-    return $this->getRoot();
+    $result = $this->getRoot();
+
+    if (A::isAssoc($result)) {
+      return (object) $result;
+    }
+
+    return $result;
   }
 
-  /*
   public function visitArray($data, array $type, Context $context) {
     $result = parent::visitArray($data, $type, $context);
 
@@ -24,7 +29,6 @@ class ObjectSerializationVisitor extends JsonSerializationVisitor {
 
     return $result;
   }
-  */
 
   public function endVisitingObject(ClassMetadata $metadata, $data, array $type, Context $context) {
     $result = parent::endVisitingObject($metadata, $data, $type, $context);
