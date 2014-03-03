@@ -42,6 +42,12 @@ class ObjectSerializationVisitorTest extends \Webforge\Code\Test\Base {
     ;
   }
 
+  public function testAnArrayCanBeSerilalizedAsAnArray() {
+    $this->assertInternalType('array', $serialized = $this->serialize(array($this->post, $this->author)));
+    $this->assertInternalType('object', $serialized[0]);
+    $this->assertInternalType('object', $serialized[1]);
+  }
+
   protected function serialize($object) {
     return $this->serializer->serialize($object, 'json');
   }
