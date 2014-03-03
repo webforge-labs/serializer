@@ -18,6 +18,7 @@
     "jms/serializer":"0.15.*@dev"
   },
   "require-dev": {
+    "webforge/testplate": "1.*",
     "webforge/doctrine": "dev-master"
   },
   "extra":{
@@ -28,8 +29,5 @@
     "directory-locations": {
       "lib": "src/php/"
     }
-  },
-  "require-dev": {
-    "webforge/testplate": "1.*"
   }
 }
