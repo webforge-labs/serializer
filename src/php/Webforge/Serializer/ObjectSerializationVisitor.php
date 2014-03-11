@@ -13,7 +13,7 @@ class ObjectSerializationVisitor extends JsonSerializationVisitor {
   public function getResult() {
     $result = $this->getRoot();
 
-    if (A::isAssoc($result)) {
+    if (is_array($result) && A::isAssoc($result)) {
       return (object) $result;
     }
 
@@ -23,7 +23,7 @@ class ObjectSerializationVisitor extends JsonSerializationVisitor {
   public function visitArray($data, array $type, Context $context) {
     $result = parent::visitArray($data, $type, $context);
 
-    if (A::isAssoc($result)) {
+    if (is_array($result) && A::isAssoc($result)) {
       $result = (object) $result;
     }
 
