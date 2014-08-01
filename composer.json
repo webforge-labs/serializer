@@ -15,7 +15,7 @@
     }
   },
   "require":{
-    "jms/serializer":"0.15.*@dev"
+    "jms/serializer":"0.15.*"
   },
   "require-dev": {
     "webforge/testplate": "1.*",
