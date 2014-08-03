@@ -1,6 +1,6 @@
 <?php
 
-namespace Webforge\Serializer;
+namespace Webforge\ProjectStack\Serializer;
 
 use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\GraphNavigator;
